@@ -14,6 +14,6 @@ This is a simplified version of the cosmos odyssey project.
 
 ## To run:
 - Clone the repo
-- Go to the simple-odyssey directory `cd simple-odyssey`
+- Go to the SimpleOdyssey directory `cd SimpleOdyssey`
 - Install dependencies `npm install`
 - Run `npm run dev`
