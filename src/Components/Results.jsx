@@ -123,12 +123,14 @@ function Results({ filteredRoutes, validUntil }) {
                         <button 
                             onClick={() => setSortOrder('price')}
                             className={sortOrder === 'price' ? 'active-sort' : ''}
+                            style={sortOrder === 'price' ? { backgroundColor: 'green' } : {}}
                         >
                             REORDER BY PRICE {sortOrder === 'price' ? 'X' : ''}
                         </button>
                         <button 
                             onClick={() => setSortOrder('time')}
                             className={sortOrder === 'time' ? 'active-sort' : ''}
+                            style={sortOrder === 'time' ? { backgroundColor: 'green' } : {}}
                         >
                             REORDER BY TIME {sortOrder === 'time' ? 'X' : ''}
                         </button>

@@ -13,7 +13,11 @@ function App() {
 
     return (
         <>
-            <div className="page-buttons">
+            <div className="page-buttons" 
+            style={{
+                margin: '5vh',
+            }}>
+                <h2>Select page:</h2>
                 <button 
                     onClick={() => setCurrentPage('search')}
                     className={currentPage === 'search' ? 'active-page' : ''}
@@ -29,7 +33,9 @@ function App() {
             </div>
             
             {currentPage === 'search' ? (
+                
                 <>
+                <h2>Search: </h2>
                     <SearchBar setFilteredRoutes={setFilteredRoutes} setValidUntil={setValidUntil} />
                     <Results filteredRoutes={filteredRoutes} validUntil={validUntil} />
                 </>

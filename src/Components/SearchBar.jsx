@@ -146,18 +146,15 @@ function SearchBar({ setFilteredRoutes, setValidUntil }) {
 
     return (
         <>
-            <div className="selectors">
-                <button onClick={SelectAll}>SELECT ALL</button>
-                <button onClick={SelectNone}>SELECT NONE</button>
-            </div>
             
             <div className="search-div">
                 <select 
                     className="from-select" 
                     value={fromPlanet} 
+                    style={{fontSize: '25px'}}
                     onChange={(e) => setFromPlanet(e.target.value)}
                 >
-                    <option value="">Select From Planet</option>
+                    <option value="" disabled style={{ color: 'gray' }}>Select from...</option>
                     {planets.map((planet, index) => (
                         <option key={index} value={planet}>{planet}</option>
                     ))}
@@ -171,9 +168,10 @@ function SearchBar({ setFilteredRoutes, setValidUntil }) {
                 <select 
                     className="to-select" 
                     value={toPlanet} 
+                    style={{fontSize: '25px'}}
                     onChange={(e) => setToPlanet(e.target.value)}
                 >
-                    <option value="">Select To Planet</option>
+                    <option value="" disabled style={{ color: 'gray' }}>Select to...</option>
                     {planets.map((planet, index) => (
                         <option key={index} value={planet}>{planet}</option>
                     ))}
@@ -191,6 +189,11 @@ function SearchBar({ setFilteredRoutes, setValidUntil }) {
                         </label>
                     ))}
                 </div>
+
+                <div className="selectors">
+                <button onClick={SelectAll} style={{fontSize: '10px'}}>SELECT ALL COMPANIES</button>
+                <button onClick={SelectNone} style={{fontSize: '10px'}}>SELECT NO COMPANIES</button>
+                </div>               
 
                 <button className="routes-btn" onClick={findRoutes}>FIND ROUTES</button>
             </div>
